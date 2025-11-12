@@ -37,6 +37,7 @@ def linkParser():
 class MyHTMLParser(HTMLParser):
 
     def __init__(self, url):
+        super().__init__()
         if 'http' in url or 'https' in url:
             resp = urllib.request.urlopen(url)
             content = resp.read()
